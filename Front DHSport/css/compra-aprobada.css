@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+#compra-aprobada {
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    padding-top: 10%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#check {
+    width: 50px;
+    margin-bottom: 1.5em;
+}
+
+.mensaje-felicitaciones {
+    background: #33B21E;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+
+.mensaje-felicitaciones h1 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.mensaje-felicitaciones h3 {
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.mensaje-felicitaciones h2 {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2em 15px;
+    
+}
+
+.mensaje-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: justify;
+    margin-bottom: 3em;
+}
+
+.mensaje-info img {
+    width: 24px;
+}
+
+.mensaje-info p {
+    padding-left: 10px;
+}
+
+.volver-al-inicio {
+    width: 100%;
+    background: #3E599C;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volver-al-inicio a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#botonDelCarro {
+    display: none;
+}

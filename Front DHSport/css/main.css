@@ -1,0 +1,147 @@
+.el-nav {
+    background: #ffffff;
+}
+
+.logo img{
+    width: 48px;
+}
+
+.los-botones-nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imagenLogin {
+    width: 24px;
+}
+
+#imagenCarrito {
+    width: 24px;
+}
+
+.icono-hamburguesa {
+    width: 24px;
+}
+
+.numero-indicador-items {
+    position: absolute;
+    margin-left: -18px;
+    margin-top: -5px;
+    color: #fff;
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagen-producto-carro {
+    width: 60px;
+}
+
+.carousel-control-prev {
+    background: none;
+}
+
+.carousel-control-next {
+    background: none;
+}
+
+.d-block.w-100.img-fluid {
+    height: 10em;
+}
+
+/* Caja de producto */
+.lista-producto {
+    width: 100%;
+}
+
+.caja-producto {
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 10px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #c4c4c4;
+
+}
+
+.imagen-producto {
+    width: 100px;
+    float: left;
+    margin: 5px;
+}
+
+.info-producto {
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.titulo-producto {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px;
+    line-height: 15px;
+}
+
+.precio-producto {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.otro-div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.descripcion {
+    font-size: 10px;
+    line-height: 10px;
+    text-align: left;
+}
+
+.agregar-al-carro span::before{
+    content: url(../img/iconos/iconmonstr-shopping-cart-15-24.png);
+}
+
+.agregar-al-carro {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -15px;
+}
+
+.contenedor-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-carrito li {
+    list-style: none;
+    font-size: 13px;
+}
+
+.registro {
+    margin-top: 5px;
+}
+
+.finalizar-compra {
+    text-decoration: none;
+    color: #FFF;
+}
+footer {
+  text-align: center;
+  color: #FFF;
+  margin-top: 20px;
+}
+footer .redes {
+  text-align: center;
+}

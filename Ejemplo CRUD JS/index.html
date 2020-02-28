@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>crud js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" onsubmit="event.preventDefault(); onFormSubmit();"> <!-- para prevenir el comportamiento por default the enviar los parametros-->
+        <label for="title">Titulo</label>
+        <input type="text" name="title" id="title">
+        <label for="description">description</label>
+        <input type="text" name="description" id="description">
+
+        <label for="price">price</label>
+        <input type="number" name="price" id="price">
+        <label for="price">stock</label>
+        <input type="number" name="stock" id="stock">
+        <input type="submit" value="Guardar">
+    </form>
+    <div id="root"></div>
+    <script src="script.js"></script>
+</body>
+</html>

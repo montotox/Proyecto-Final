@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administración productos</title>
+
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<div>
+			<a href="/admin/products/save/0" class="btn btn-primary">Agregar</a>
+		</div>
+		<h2 th:if="${list.isEmpty()}">No hay productos</h2>
+		<div th:if="${!list.isEmpty()}">
+			<h2>Productos</h2>
+			<table class="display" id="productTable">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Descripción</th>
+						<th>Precio</th>
+						<th>Stock</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="product : ${list}">
+						<td th:text="${product.title}">
+						<td th:text="${product.description}">
+						<td th:text="${product.price}">
+						<td th:text="${product.stock}">
+						<td><a class="btn btn-info"
+							th:href="@{/admin/products/save/{id}(id=${product.id})}">Editar</a></td>
+						<td><a class="btn btn-danger"
+							th:href="@{/admin/products/delete/{id}(id=${product.id})}">Eliminar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="jquery.dataTables.js"></script>
+<script type="text/javascript">
+	$(document)
+			.ready(
+					function() {
+						$('#productTable')
+								.dataTable(
+										{
+											"language" : {
+												"sProcessing" : "Procesando...",
+												"sLengthMenu" : "Mostrar _MENU_ registros",
+												"sZeroRecords" : "No se encontraron resultados",
+												"sEmptyTable" : "Ningún dato disponible en esta tabla =(",
+												"sInfo" : "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+												"sInfoEmpty" : "Mostrando registros del 0 al 0 de un total de 0 registros",
+												"sInfoFiltered" : "(filtrado de un total de _MAX_ registros)",
+												"sInfoPostFix" : "",
+												"sSearch" : "Buscar:",
+												"sUrl" : "",
+												"sInfoThousands" : ",",
+												"sLoadingRecords" : "Cargando...",
+												"oPaginate" : {
+													"sFirst" : "Primero",
+													"sLast" : "Último",
+													"sNext" : "Siguiente",
+													"sPrevious" : "Anterior"
+												},
+												"oAria" : {
+													"sSortAscending" : ": Activar para ordenar la columna de manera ascendente",
+													"sSortDescending" : ": Activar para ordenar la columna de manera descendente"
+												},
+												"buttons" : {
+													"copy" : "Copiar",
+													"colvis" : "Visibilidad"
+												}
+
+											}
+										});
+					});
+</script>
+</html>

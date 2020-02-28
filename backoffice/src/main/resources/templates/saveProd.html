@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Guardar/Editar producto</title>
+
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<h2>Agregar productos</h2>
+		<form action="#" th:action="@{/admin/products/save}"
+			th:objetct="${product}" method="post">
+			<div class="form-group">
+				<label for="title">Nombre</label> <input type="text"
+					class="form-control" id="title" name="title"
+					th:field="*{product.title}" />
+			</div>
+			<input type="hidden" th:field="*{product.id}" name="id" id="id">
+			<div class="form-group">
+				<label for="description">Descripción</label> <input type="text"
+					class="form-control" id="description" name="description"
+					th:field="*{product.description}">
+			</div>
+			<div class="form-group">
+				<label for="price">Precio</label> <input type="number"
+					class="form-control" id="price" name="price"
+					th:field="*{product.price}">
+			</div>
+			<div class="form-group">
+				<label for="stock">Stock</label> <input type="number"
+					class="form-control" id="stock" name="stock"
+					th:field="*{product.stock}">
+			</div>
+			<div class="form-group">
+				<label for="image">Imagen</label> <input type="text"
+					class="form-control" id="image" name="image"
+					th:field="*{product.image}" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar</button>
+			<a class="btn btn-danger" th:href="@{/admin/products}">Cancelar</a>
+		</form>
+	</div>
+</body>
+</html>

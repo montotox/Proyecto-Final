@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Guardar/Editar cliente</title>
+
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+<!-- Iconos Font Awesome -->
+<script src="https://kit.fontawesome.com/1bacecbea5.js"
+	th:crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<h2>Agregar productos</h2>
+		<form action="#" th:action="@{/admin/clients/save}" th:objetct="${client}"
+			method="post">
+			<div class="form-group">
+				<input type="hidden" th:field="*{client.id}" name="id" id="id">
+				<label for="dni">DNI</label> <input type="number"
+					class="form-control" id="dni" name="dni" th:field="*{client.dni}" />
+			</div>
+			<div class="form-group">
+				<label for="name">Nombre y Apellido</label> <input type="text"
+					class="form-control" id="name" name="name"
+					th:field="*{client.name}">
+			</div>
+			<div class="form-group">
+				<label for="adress">Domicilio</label> <input type="text"
+					class="form-control" id="adress" name="adress"
+					th:field="*{client.adress}">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label> <input type="email"
+					class="form-control" id="email" name="email"
+					th:field="*{client.email}">
+			</div>
+			<button type="submit" class="btn btn-success">Guardar</button>
+			<a class="btn btn-danger" th:href="@{/admin/clients}">Cancelar</a>
+		</form>
+	</div>
+</body>
+</html>

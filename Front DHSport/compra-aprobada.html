@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra exitosa</title>
+    <link rel="shortcut icon" href="img/iconos/iconmonstr-soccer-1-240.png">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/compra-aprobada.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/carrito.js"></script>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light el-nav">
+        <a class="logo" href="index.html"><img src="img/logosBancosYTarjetas/logo.png" alt=""></a>
+        
+        <!-- Botones NavBar -->
+        <div class="los-botones-nav">
+
+        <!-- Button Modal Login -->
+        <button type="button" class="btn btn-primary boton-nav" data-toggle="modal" data-target="#modalLogin" style="position: relative;">
+            <img id="imagenLogin" src="img/iconos/iconmonstr-user-5-240.png" alt="carrito" srcset="">
+        </button>
+
+        <!-- Modal Login -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title text-primary" id="exampleModalLabel">Bienvenido</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+                          <small id="emailHelp" class="form-text text-muted">Tus datos nunca serán compartidos con nadie.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword">Contraseña</label>
+                          <input type="password" class="form-control" id="exampleInputPassword" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="modal-footer row">
+                            <div class="form-check col-sm-4">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck51">
+                                <label class="form-check-label" for="exampleCheck51">Recordarme</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-sm-4 m-x-1">Ingresar</button>
+                            <!-- Button Modal Registro -->
+                            <button type="button" class=" registro btn btn-success boton-nav col-sm-4 m-x-1" data-toggle="modal" data-target="#modalRegistro" style="position: relative;">Registrarme</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fin Modal Login -->
+
+        <!-- Modal Registro -->
+        <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title text-primary" id="exampleModalLabel1">Es un gran día</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" >
+                          
+                        </div>
+                        <div class="form-group">
+                          <label for="apellido">Apellido</label>
+                          <input type="text" class="form-control" id="apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" >
+                            <small id="emailHelp" class="form-text text-muted">Tus datos nunca serán compartidos con nadie.</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="repetirEmail">Repetir email</label>
+                            <input type="email" class="form-control" id="repetirEmail">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword2">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+                            
+                          </div>
+                          <div class="form-group">
+                            <label for="repetirContraseña">Repetir contraseña</label>
+                            <input type="password" class="form-control" id="repetirContraseña" placeholder="repetirContraseña">
+                          </div>
+                        <div class="modal-footer row">
+                            <div class="form-check col-sm-4">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                <label class="form-check-label" for="exampleCheck2">Recibir promociones por email</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-sm-4 m-x-1">Crear cuenta</button>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fin Modal Registro -->
+
+        <!-- Button Modal Carrito -->
+        <button id="botonDelCarro" type="button" class="btn btn-primary boton-nav" data-toggle="modal" data-target="#exampleModal" style="position: relative;">
+            <img id="imagenCarrito" src="img/iconos/iconmonstr-shopping-cart-8-240.png" alt="carrito" srcset="">
+            <span id="botonCarrito"></span>
+        </button>
+        
+        <!-- Modal Carrito -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- Carrito -->
+                    <aside class="col-sm-12" id="carritoDesplegable">
+                        <h5 class="modal-title text-primary">Tu carrito</h5>
+                        <!-- Elementos del carrito -->
+                        <ul id="carrito"></ul>
+                        <hr>
+                        <!-- Precio total -->
+                        <p class="text-right">Total: <span id="total"></span>&dollar;.-</p>
+                    </aside>
+                    <div class="modal-footer row">
+                        <button type="submit" class="btn btn-primary col-sm-4 m-x-1">
+                            <a class="finalizar-compra" href="proceso-de-pago.html">Finalizar compra</a> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal Carrito -->
+
+        <!-- Boton Menu Hamburguesa -->
+        <button class="btn btn-primary boton-nav" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <img class="icono-hamburguesa" src="img/iconos/iconmonstr-menu-1-240.png" alt="">
+        </button>
+        </div>
+        <!-- Fin Boton Menu Hamburguesa -->
+
+        <!-- Menu desplegable -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                <a class="nav-link text-primary" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link text-primary" href="#">Contacto</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link text-primary" href="#">Preguntas frecuentes</a>
+                </li>
+            </ul>
+            <form class="form my-2 my-lg-1">
+                <input class="form-control mr-sm-2" type="search" placeholder="¿Qué estas buscando?">
+                <button class="btn btn-primary my-2 my-sm-0 ml-1" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- NavBar -->
+
+    <!--Mensaje de felicitación-->
+    <div id="compra-aprobada">
+        <img id="check" src="img/iconos/iconmonstr-check-mark-green-4-240.png" alt="">
+        <div class="mensaje-felicitaciones">
+            <h1>¡Felicitaciones!</h1>
+            <h3>Tu pago fue aprobado</h3>
+            <h2>Tus productos llegarán a tu domicilio en el período indicado</h2>
+        </div>
+        <div class="mensaje-info">
+            <img src="img/iconos/iconmonstr-info-ligthblue-7-240.png" alt="">
+            <p>Se envió a tu casila de email un correo con la facturación correspondiente</p>
+        </div>
+        <div class="volver-al-inicio">
+            <a href="index.html">Volver al inicio</a>
+        </div>
+    </div>
+    <!--Fin Mensaje de felicitación-->
+
+    
+</body>
